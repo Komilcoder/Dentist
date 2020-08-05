@@ -1,0 +1,52 @@
+{% extends 'website/base.html'%}
+{% load static %}
+
+
+{% block content %}
+
+<br>
+<!--inner banner-->
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Doctors Details</h1>
+      </div>
+      <div class="col-md-5">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <br>
+          <li class="active">Doctors Details</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Main Content Start-->
+<div class="main-content">
+  <div class="team-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="team-detail-img"> <img src="{{ object.image.url }}" alt=""> </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="team-details-text">
+            <div class="sectio-title-2"><h2>{{ object.name }}</h2>
+             <strong>{{ object.speciality }}</strong>
+              
+            </div>
+            <p>{{ dentist.experience}}</p>
+            <p>{{ dentist.phone }}</p>
+            <p>{{ object.email }}</p>
+           </div>
+           </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+          
+
+{% endblock %}

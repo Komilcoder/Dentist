@@ -1,0 +1,39 @@
+{% extends 'website/base.html'%}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+
+
+<style>
+.form-control{
+    width:350px;
+    background-color:lightblue;
+}
+.here{
+    background-color:lightblue;
+}
+
+
+</style>
+
+<h1>Login</h1>
+<br><br>
+
+<div class="form-group">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" class="form-control" placeholder="Username" name="username"><br>
+        <input type="password" class="form-control" placeholder="Password" name="password">
+        <br>
+
+        <button class="btn btn-secondary">Login</button>
+        <br><br>
+        Not Registered? Sign Up <a href="{% url 'register'%}" class="here">Here</a>
+    
+    
+    </form>
+
+
+</div>
+
+{% endblock %}
