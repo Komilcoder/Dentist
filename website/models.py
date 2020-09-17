@@ -139,7 +139,18 @@ class Friendly_staff(models.Model):
         return self.staff
             
 # end about page
-       
+
+
+# for pricing table , getting data
+
+class Service_name(models.Model):
+    name = models.CharField(max_length=200)
+    stage = models.CharField(max_length=300)
+    price = models.FloatField()
+
+    def __str__(self):
+        return self.name
+    
 
 
         
